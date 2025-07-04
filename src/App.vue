@@ -1,85 +1,78 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <router-view />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eaeaea;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
+/* Container dan Section */
+body.dark-mode .container,
+body.dark-mode section {
   background-color: transparent;
+  color: #eaeaea;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+/* Card, box, dll */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+  border: none;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 }
 
-nav a:first-of-type {
-  border: 0;
+/* Input, search bar, dll */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #444;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+body.dark-mode input::placeholder {
+  color: #aaa;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+/* Link dan teks */
+body.dark-mode a {
+  color: #dcdcdc;
+}
+body.dark-mode a:hover {
+  color: #ffffff;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+/* Footer */
+body.dark-mode footer {
+  background-color: #181818;
+  color: #eaeaea;
+  border-top: 1px solid #2a2a2a;
+}
+body.dark-mode footer .text-muted {
+  color: #bfbfbf !important;
+}
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+/* Tambahan efek latar */
+body.dark-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.03), transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.02), transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
 }
 </style>
