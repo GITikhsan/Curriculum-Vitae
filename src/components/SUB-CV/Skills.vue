@@ -13,7 +13,7 @@ const skills = [
 ];
 </script>
 <template>
-    <section id="skill" class="py-20 bg-gray-50">
+    <section id="skill" class="py-20 bg-gray-50 bg-[#e5d9cd]">
         <div class="container mx-auto px-6">
             <SectionTitle title="Keahlian & Teknologi" />
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8">

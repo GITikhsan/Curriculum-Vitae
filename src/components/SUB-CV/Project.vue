@@ -19,7 +19,7 @@ const projects = [
 </script>
 
 <template>
-    <section id="proyek" class="py-20 bg-white">
+    <section id="proyek" class="py-20 bg-white bg-[#e5d9cd]">
         <div class="container mx-auto px-6">
             <SectionTitle title="Proyek Unggulan" />
             <div class="grid md:grid-cols-2 gap-12">
