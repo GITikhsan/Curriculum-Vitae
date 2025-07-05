@@ -1,7 +1,7 @@
 <script setup>
 const items = [
   { to: '/', name: 'Home' },
-  { to: '/resume', name: 'Resume' },
+  { to: '/skills', name: 'Skills' },
   { to: '/project', name: 'Projects' },
   { to: '/contact', name: 'Contact' } 
 ]
