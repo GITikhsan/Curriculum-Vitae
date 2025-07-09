@@ -1,120 +1,3 @@
-<template>
-  <header class="bg-white shadow-md sticky top-0 z-50 animate-fade-in">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-gray-800">Ikhsanuddin Ahmad Fauzi</div>
-      <!-- Hamburger Button (Mobile) -->
-      <button
-        class="md:hidden flex items-center px-3 py-2 border rounded text-gray-600 border-gray-400 hover:text-blue-500 focus:outline-none"
-        @click="isOpen = !isOpen"
-        aria-label="Toggle navigation"
-      >
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            v-if="!isOpen"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-          <path
-            v-else
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6">
-        <li>
-          <a
-            href="#profil"
-            class="text-gray-600 hover:text-blue-500 transform hover:-translate-y-0.5 transition-all duration-300"
-            >Profil</a
-          >
-        </li>
-        <li>
-          <a
-            href="#pendidikan"
-            class="text-gray-600 hover:text-blue-500 transform hover:-translate-y-0.5 transition-all duration-300"
-            >Pendidikan</a
-          >
-        </li>
-        <li>
-          <a
-            href="#skill"
-            class="text-gray-600 hover:text-blue-500 transform hover:-translate-y-0.5 transition-all duration-300"
-            >Skill</a
-          >
-        </li>
-        <li>
-          <a
-            href="#proyek"
-            class="text-gray-600 hover:text-blue-500 transform hover:-translate-y-0.5 transition-all duration-300"
-            >Proyek</a
-          >
-        </li>
-        <li>
-          <a
-            href="#kontak"
-            class="text-gray-600 hover:text-blue-500 transform hover:-translate-y-0.5 transition-all duration-300"
-            >Kontak</a
-          >
-        </li>
-      </ul>
-      <!-- Mobile Menu -->
-      <transition name="fade">
-        <ul
-          v-if="isOpen"
-          class="absolute top-full left-0 w-full bg-white shadow-md flex flex-col space-y-2 py-4 px-6 md:hidden z-50"
-        >
-          <li>
-            <a
-              href="#profil"
-              class="block text-gray-600 hover:text-blue-500 py-2 transition-all duration-300"
-              @click="isOpen = false"
-              >Profil</a
-            >
-          </li>
-          <li>
-            <a
-              href="#pendidikan"
-              class="block text-gray-600 hover:text-blue-500 py-2 transition-all duration-300"
-              @click="isOpen = false"
-              >Pendidikan</a
-            >
-          </li>
-          <li>
-            <a
-              href="#skill"
-              class="block text-gray-600 hover:text-blue-500 py-2 transition-all duration-300"
-              @click="isOpen = false"
-              >Skill</a
-            >
-          </li>
-          <li>
-            <a
-              href="#proyek"
-              class="block text-gray-600 hover:text-blue-500 py-2 transition-all duration-300"
-              @click="isOpen = false"
-              >Proyek</a
-            >
-          </li>
-          <li>
-            <a
-              href="#kontak"
-              class="block text-gray-600 hover:text-blue-500 py-2 transition-all duration-300"
-              @click="isOpen = false"
-              >Kontak</a
-            >
-          </li>
-        </ul>
-      </transition>
-    </nav>
-  </header>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 const isOpen = ref(false)
@@ -128,3 +11,62 @@ const isOpen = ref(false)
   opacity: 0;
 }
 </style>
+
+<template>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo & Title -->
+      <div class="flex items-center space-x-2">
+        <div class="w-4 h-4 bg-blue-600"></div>
+        <div>
+          <h1 class="text-xl md:text-2xl font-bold text-gray-900 leading-none">Ikhsanuddin Ahmad Fauzi</h1>
+          <p class="text-sm text-gray-700 md:hidden">WEB AND MOBILE DEV</p>
+        </div>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button
+        class="md:hidden text-blue-600 focus:outline-none"
+        @click="isOpen = !isOpen"
+        aria-label="Toggle navigation"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            v-if="!isOpen"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+          <path
+            v-else
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 items-center">
+        <li><a href="#profil" class="hover:text-blue-600 text-gray-800 font-medium">ABOUT ME</a></li>
+        <li><a href="#pendidikan" class="hover:text-blue-600 text-gray-800 font-medium">EDUCATION</a></li>
+        <li><a href="#skill" class="hover:text-blue-600 text-gray-800 font-medium">SKILLS</a></li>
+        <li><a href="#proyek" class="hover:text-blue-600 text-gray-800 font-medium">PROJECTS</a></li>
+        <li><a href="#kontak" class="hover:text-blue-600 text-gray-800 font-medium">CONTACT</a></li>
+      </ul>
+
+      <!-- Mobile Fullscreen Menu -->
+      <transition name="fade">
+        <div
+          v-if="isOpen"
+          class="fixed inset-0 bg-[#fef9f6] z-50 flex flex-col items-center justify-center space-y-6 text-center"
+        >
+          <button class="absolute top-5 right-5 text-black text-3xl" @click="isOpen = false">×</button>
+          <a href="#profil" class="text-blue-600 text-xl font-bold" @click="isOpen = false">ABOUT ME</a>
+          <a href="#pendidikan" class="text-black text-xl font-bold" @click="isOpen = false">EDUCATION</a>
+          <a href="#skill" class="text-black text-xl font-bold" @click="isOpen = false">SKILLS</a>
+          <a href="#proyek" class="text-black text-xl font-bold" @click="isOpen = false">PROJECTS</a>
+          <a href="#kontak" class="text-black text-xl font-bold" @click="isOpen = false">CONTACT</a>
+        </div>
+      </transition>
+    </nav>
+  </header>
+</template>

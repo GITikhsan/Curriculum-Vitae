@@ -1,7 +1,4 @@
 <script setup>
-import EducationSection from './components/Education.vue'
-import SkillsSection from './components/Skills.vue'
-import ProjectsSection from './components/Projects.vue'
 import { RouterView } from 'vue-router'
 </script>
 <template>
