@@ -17,8 +17,8 @@
        Informatics Engineering student who is passionate about Mobile development, web development and interface design.
       </p>
       <a
-        href="#kontak"
-        class="bg-blue-600 text-white font-bold py-2 sm:py-3 px-5 sm:px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 inline-block animate-slide-in-left"
+        href="https://api.whatsapp.com/send/?phone=6281233466631&text&type=phone_number&app_absent=0"
+        class="bg-blue-600 text-white font-bold py-2 sm:py-3 px-5 sm:px-6 rounded-lg hover:bg-gray-700 transition-colors duration-300 inline-block animate-slide-in-left"
         style="animation-delay: 600ms"
       >
         Contact me

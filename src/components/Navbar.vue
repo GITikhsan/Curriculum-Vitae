@@ -13,7 +13,7 @@ const isOpen = ref(false)
 </style>
 
 <template>
-  <header class="bg-white shadow-md sticky top-0 z-50">
+  <header class="bg-white/70 shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Logo & Title -->
       <div class="flex items-center space-x-2">

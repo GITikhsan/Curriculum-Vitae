@@ -18,7 +18,7 @@ onMounted(async () => {
 <template>
   <section id="pendidikan" class="py-20 bg-white">
     <div class="container mx-auto px-4 sm:px-6">
-      <SectionTitle title="Riwayat Pendidikan" />
+      <SectionTitle title="Educational background" />
       <div class="relative mt-12">
         <!-- Timeline line (hidden on mobile) -->
         <div
